@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p4score"
+version = "0.0.1"
+dependencies = []
+requires-python = ">=3.11"
+authors = [
+  {name = "Thomas Vidori", email = "thomas.vidori@protonmail.com"},
+]
+readme = "README.md"
