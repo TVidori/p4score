@@ -1,7 +1,7 @@
 # p4score
 
 This is a repository used for explaining how to create a python package and publish it on GitHub.
-The whole tutorial can be found at: ....
+The whole tutorial can be found at: https://medium.com/@thomas.vidori/eebc78b2a12d
 
 
 ### Purpose
