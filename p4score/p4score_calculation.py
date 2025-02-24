@@ -1,3 +1,7 @@
+import numpy as np
+
+from p4score import conversion_functions
+
 
 def calculate_p4score(
         true_positive: int,
@@ -16,3 +20,25 @@ def calculate_p4score(
     return (4 / (
         1 / precision + 1 / recall + 1 / specificity + 1 / npv
     ))
+
+
+def calculate_p4score_from_predictions(
+        predictions: np.ndarray,
+        actual_values: np.ndarray,
+) -> float:
+    (
+        true_positive,
+        false_negative,
+        false_positive,
+        true_negative,
+    ) = conversion_functions.convert_predictions_to_confusion_matrix(
+        predictions=predictions,
+        actual_values=actual_values,
+    )
+
+    return calculate_p4score(
+        true_positive=true_positive,
+        false_negative=false_negative,
+        false_positive=false_positive,
+        true_negative=true_negative,
+    )
